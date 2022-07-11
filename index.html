@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Turchi Store Moda y Electrónica  </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/logito.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top  border-bottom  border-light border-2"
+        style="background-color: #0c2d49">
+        <div class="container-fluid">
+            <a class="navbar-brand  mb-0 h1 align-self-center-lg" href="#!">
+                <img src="assets\Sin título.png" alt="" width="150" height="60"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Tienda de Ropa</a></li>
+                            <li><a class="dropdown-item" href="#!">Electronica</a></li>
+                            <li><a class="dropdown-item" href="#!">Joyas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Productos Populares</a></li>
+                            <li><a class="dropdown-item" href="#!">Nuevos Arribos</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <form class="nav-item d-flex col-5 pb-2" role="search">
+                    <input id="buscar" class="form-control " type="search" placeholder="Tipee para buscar productos..."
+                        aria-label="Search">
+                    
+                </form>
+                <div class=" nav-item d-flex">
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight" class="btn btn-outline-dark">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span id="cantCarrito" class="badge bg-danger text-black ms-1 rounded-pill">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="container carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets\Diseño sin título.png" width="1400" height="500" class="img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class=" animate__animated animate__jackInTheBox">Productos de electronica</h5>
+                    <p>Computadoras, monitores, dispositivos y más</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="assets\stylish-woman-with-shopping-bags (1).jpg" width="1400" height="500" class="img-fluid"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h3 class="animate__animated animate__jackInTheBox">Tienda de ropa</h3>
+                    <p>Ropa de mujer y hombre</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets\bh-mayorista-joyas-de-plata (1).jpg" height="500" class=" img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Joyas</h5>
+                    <p>Joyas y Bijouterie </p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Section-->
+    <section class="container pt-md-3 pb-5 mb-md-3">
+        <h2 class="h3 text-center text-white">Productos en tendencia</h2>
+        <div class="row pt-4 mx-n2" id="cards-container">
+            <!-- Trajetas de productos generadas por JS, obtenidas mediante una API -->
+        </div>
+
+        <div class="offcanvas offcanvas-end" style="background-color:#d0d1d1;" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Carrito</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Acción</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items">
+
+                    </tbody>
+                    <tfoot>
+                        <tr id="footer">
+                            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <template id="template-footer">
+                    <th scope="row" colspan="2">Total productos</th>
+                    <td>10</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                            vaciar todo
+                        </button>
+                    </td>
+                    <td class="font-weight-bold">$ <span>5000</span></td>
+                </template>
+                <template id="template-carrito">
+                    <tr>
+                        <th scope="row">id</th>
+                        <td>Café</td>
+                        <td>1</td>
+                        <td>
+                            <button class="btn btn-info btn-sm">
+                                +
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                -
+                            </button>
+                        </td>
+                        <td>$ <span>500</span></td>
+                    </tr>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Dario Turchi 2022</p>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js" type="module"></script>
+</body>
+
+</html>
